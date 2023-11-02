@@ -1,5 +1,77 @@
+# Convertir un Jupyter Notebook (.ipynb) a un Archivo Ejecutable (.exe)
+
+Guía genérica sobre cómo convertir un archivo Jupyter Notebook (.ipynb) en un archivo ejecutable (.exe) utilizando la herramienta `PyInstaller` por medio de la utilizacion de CMD. Este proceso te permite distribuir y ejecutar tu código en sistema Windows sin necesidad de tener Python o Jupyter Notebook instalados.
+
+## Pasos para Convertir a .exe
+
+### 1. Instalar Python
+
+Asegúrate de tener Python instalado en tu sistema. Si no lo tienes, puedes descargarlo desde [python.org](https://www.python.org/downloads/).
+
+### 2. Instalar `PyInstaller`
+
+Abre una terminal o línea de comandos y ejecuta el siguiente comando para instalar `PyInstaller`:
+
+```bash
+pip install pyinstaller
+```
+
+### 3. Clona o Descarga este Repositorio
+
+Puedes clonar este repositorio o simplemente descargar el contenido como un archivo ZIP.
+
+### 4. Navega al Directorio del Repositorio
+
+Abre una terminal o línea de comandos y navega al directorio donde se encuentra el archivo `.ipynb` que deseas convertir.
+
+Ejemplo (cambia la ruta al directorio donde se encuentra tu archivo):
+```bash
+cd C:\Users\TakeshiMechanics\Desktop
+```
+
+### 5. Ejecuta `PyInstaller`
+
+Una vez en el directorio adecuado, ejecuta el siguiente comando para convertir el archivo `.ipynb` en un ejecutable:
+
+```bash
+pyinstaller --onefile NombreDelArchivo.ipynb
+```
+
+Reemplaza `NombreDelArchivo.ipynb` con el nombre de tu archivo Jupyter Notebook. El proceso de conversión puede llevar algún tiempo y generará varios archivos temporales en un nuevo directorio llamado `dist`.
+
+### 6. Encuentra el Archivo Ejecutable
+
+Una vez que se complete el proceso de conversión, el archivo ejecutable estará disponible en el directorio `dist`. Puedes compartir este archivo con otros usuarios de Windows para que puedan ejecutar tu código sin necesidad de Python.
+
+Ejemplo:
+```bash
+C:\Users\TakeshiMechanics\Desktop\dist\NombreDelArchivo.exe
+```
+
+## Notas Adicionales
+
+- Ten en cuenta que la conversión a ejecutable puede no ser perfecta en todos los casos. Asegúrate de probar el archivo .exe en el sistema de destino.
+
+## Contribuciones
+
+Si encuentras errores o deseas agregar mejoras a este repositorio, ¡no dudes en crear un pull request!
+
+## Licencia
+
+Este proyecto está disponible bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más información.
+
+¡Esperamos que esta guía te ayude a convertir tus Jupyter Notebooks en archivos ejecutables de manera sencilla y eficaz!
+```
+
+Este README proporciona una guía genérica sobre cómo utilizar `PyInstaller` para convertir un archivo Jupyter Notebook en un archivo ejecutable. Los pasos se describen claramente y pueden adaptarse a cualquier proyecto. Asegúrate de reemplazar `NombreDelArchivo.ipynb` con el nombre de tu archivo Jupyter Notebook y ajustar las rutas según tus necesidades específicas.
+
+
+
+En mi caso fue de la siguiente manera
+
 cd C:\Users\TakeshiMechanics\Desktop
 
 pyinstaller --onefile KeyGen1.py
 
 C:\Users\TakeshiMechanics\Desktop\dist\KeyGen1.exe
+
